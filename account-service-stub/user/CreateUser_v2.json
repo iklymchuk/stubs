@@ -1,0 +1,36 @@
+{
+  "predicates":[
+    {
+      "equals":{
+        "method":"POST",
+        "path":"/user/create"
+      }
+    }
+  ],
+  "responses":[
+    {
+      "is":{
+        "statusCode":201,
+        "headers":{
+          "Content-Type":"application/json"
+        },
+        "body":{
+          "User":"Test User",
+          "Email":"test@test.com",
+          "Role":"Administrator"
+        }
+      }
+    },
+    {
+      "is":{
+        "statusCode":400,
+        "headers":{
+          "Content-Type":"application/json"
+        },
+        "body":{
+          "Error":"User already exists"
+        }
+      }
+    }
+  ]
+}

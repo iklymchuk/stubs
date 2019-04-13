@@ -1,0 +1,35 @@
+{
+  "predicates":[
+    {
+      "equals":{
+        "method":"POST",
+        "path":"/profile/create"
+      }
+    }
+  ],
+  "responses":[
+    {
+      "is":{
+        "statusCode":201,
+        "headers":{
+          "Content-Type":"application/json"
+        },
+        "body":{
+          "FirstName":"Lisa",
+          "LastName":"Simpson"
+        }
+      }
+    },
+    {
+      "is":{
+        "statusCode":400,
+        "headers":{
+          "Content-Type":"application/json"
+        },
+        "body":{
+          "Error":"Profile already exists"
+        }
+      }
+    }
+  ]
+}

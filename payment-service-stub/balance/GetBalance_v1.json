@@ -1,0 +1,24 @@
+{
+  "predicates":[
+    {
+      "equals":{
+        "method":"GET",
+        "path":"/user/balance"
+      }
+    }
+  ],
+  "responses":[
+    {
+      "is":{
+        "statusCode":201,
+        "headers":{
+          "Content-Type":"application/json"
+        },
+        "body":{
+          "Amount":500,
+          "Сurrency":"USD"
+        }
+      }
+    }
+  ]
+}
